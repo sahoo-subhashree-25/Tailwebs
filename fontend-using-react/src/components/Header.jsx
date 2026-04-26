@@ -76,7 +76,7 @@ const Header = () => {
       {/* Mobile Offcanvas Menu */}
       <div className="offcanvas offcanvas-start w-100" tabIndex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
         <div className="offcanvas-header d-flex justify-content-between align-items-center">
-          <img src="/img/logo.png" alt="eGov Foundation" className="egov-logo" style={{ width: '100px' }} />
+          <img src="/img/logo.png" alt="eGov Foundation" className="egov-logo" />
           <div className="d-flex align-items-center">
             {/* Language Switcher */}
             <div className="dropdown me-3">
