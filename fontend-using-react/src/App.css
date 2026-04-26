@@ -931,7 +931,8 @@ footer ul {
     .sustaining-title,
     .digit-tech,
     .fs-45,
-    .sustaining-title strong {
+    .sustaining-title strong,
+    .feature-card .content-wrapper h3 {
         font-size: 30px;
     }
 
@@ -940,8 +941,9 @@ footer ul {
     }
 
     .highlight-underline::after {
-        left: 58px;
+        left: 52px;
         height: 31px;
+        background-size: 63% 100%;
     }
 
     .text-partner {
@@ -1014,5 +1016,13 @@ footer ul {
 
     .latest-pill-nav {
         gap: 8px;
+    }
+
+    .feature-card .content-wrapper {
+        max-width: 100%;
+    }
+
+    .platform-section {
+        margin-top: 30px;
     }
 }

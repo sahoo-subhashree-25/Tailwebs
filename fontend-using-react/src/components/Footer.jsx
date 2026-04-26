@@ -49,7 +49,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="container-fluid bottom-footer mt-5 py-3">
-        <div className="container d-flex justify-content-between small text-white">
+        <div className="container d-flex justify-content-between align-items-center small text-white">
           <span>©2024. eGov. All Rights Reserved.</span>
           <div>
             <a href="#" className="text-decoration-none text-white">Privacy Policy </a>

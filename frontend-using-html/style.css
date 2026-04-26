@@ -935,7 +935,8 @@ footer ul {
     .sustaining-title,
     .digit-tech,
     .fs-45,
-    .sustaining-title strong {
+    .sustaining-title strong,
+    .feature-card .content-wrapper h3 {
         font-size: 30px;
     }
 
@@ -1023,5 +1024,17 @@ footer ul {
     .highlight-underline::after,
     .sustaining-title strong {
         background-size: 64% 100%;
+    }
+
+    .feature-card .content-wrapper {
+        max-width: 0%;
+    }
+
+    .feature-card .content-wrapper {
+        max-width: 100%;
+    }
+
+    .platform-section {
+        margin-top: 30px;
     }
 }

@@ -93,7 +93,7 @@ const BoldApproaches = () => {
                       <div className="feature-card" style={{ backgroundColor: '#1a8ffc', backgroundImage: "url('/img/local-img1.png')" }}>
                         <div className="content-wrapper">
                           <h3 className="fw-bold mb-0">3 Bn</h3>
-                          <p className="mb-4">COVID-19 vaccination certificates issued globally</p>
+                          <p className="mb-0">COVID-19 vaccination certificates issued globally</p>
                           <button className="btn btn-light rounded-pill btn-sm px-4 py-2 mt-2 read-btn">Read More</button>
                         </div>
                       </div>
@@ -117,7 +117,7 @@ const BoldApproaches = () => {
                       <div className="feature-card" style={{ backgroundColor: '#1a8ffc', backgroundImage: "url('/img/Truck-man.png')" }}>
                         <div className="content-wrapper">
                           <h3 className="fw-bold mb-0">2 Bn</h3>
-                          <p className="mb-4">COVID-19 vaccination certificates issued globally</p>
+                          <p className="mb-0">COVID-19 vaccination certificates issued globally</p>
                           <button className="btn btn-light rounded-pill btn-sm px-4 py-2 mt-2 read-btn">Read More</button>
                         </div>
                       </div>
