@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eGov Foundation Replica</title>
+
+  <!-- Font DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+
+
+</head>
+
+<body>
+
+  <!-- Top bar -->
+  <div class="top-bar">
+    <div class="container d-flex justify-content-center justify-content-lg-end align-items-center">
+      <a href="#">Events</a>
+      <a href="#">Contact us</a>
+      <div class="ms-4 dropdown d-inline-block lang-dropdown">
+        <span class="dropdown-toggle" style="cursor:pointer; color: var(--accent-blue); font-weight:600;"
+          id="langSelected">
+          <img src="https://flagcdn.com/w20/gb.png" alt="English" width="16" class="me-1" id="langFlag"> <span
+            id="langText" class="fw-bold fs-sm">English</span> <i class="fas fa-caret-down ms-1 lang-dropdown-icon"></i>
+        </span>
+        <ul class="dropdown-menu dropdown-menu-end shadow border-0" style="min-width: 140px; border-radius: 8px;">
+          <li><a class="dropdown-item py-2 fw-semibold text-primary" href="#"
+              onclick="changeLang('za', 'Afrikaans'); return false;"><img src="https://flagcdn.com/w20/za.png"
+                width="16" class="me-2"> Afrikaans</a></li>
+          <li><a class="dropdown-item py-2 fw-semibold text-primary" href="#"
+              onclick="changeLang('gb', 'English'); return false;"><img src="https://flagcdn.com/w20/gb.png" width="16"
+                class="me-2"> English</a></li>
+          <li><a class="dropdown-item py-2 fw-semibold text-primary" href="#"
+              onclick="changeLang('fr', 'French'); return false;"><img src="https://flagcdn.com/w20/fr.png" width="16"
+                class="me-2"> French</a></li>
+          <li><a class="dropdown-item py-2 fw-semibold text-primary" href="#"
+              onclick="changeLang('de', 'German'); return false;"><img src="https://flagcdn.com/w20/de.png" width="16"
+                class="me-2"> German</a></li>
+          <li><a class="dropdown-item py-2 fw-semibold text-primary" href="#"
+              onclick="changeLang('pt', 'Portuguese'); return false;"><img src="https://flagcdn.com/w20/pt.png"
+                width="16" class="me-2"> Portuguese</a></li>
+          <li><a class="dropdown-item py-2 fw-semibold text-primary" href="#"
+              onclick="changeLang('ru', 'Russian'); return false;"><img src="https://flagcdn.com/w20/ru.png" width="16"
+                class="me-2"> Russian</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="img/logo.png" alt="eGov Foundation" class="egov-logo">
+      </a>
+
+      <!-- Mobile Right Icons -->
+      <div class="d-flex align-items-center d-lg-none mobile-menu">
+        <a href="#" class="text-dark me-3 fs-12"><i class="fas fa-search"></i></a>
+        <button class="navbar-toggler border-0 shadow-none px-0" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#mobileNav">
+          <i class="fas fa-bars fs-12 text-dark "></i>
+        </button>
+      </div>
+
+      <!-- Desktop Nav -->
+      <div class="collapse navbar-collapse d-none d-lg-block" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">About Us <svg class="nav-arrow"
+                width="21" height="10" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Who We Are</a></li>
+              <li><a class="dropdown-item" href="#">Our Impact</a></li>
+              <li><a class="dropdown-item" href="#">Our Approach</a></li>
+              <li><a class="dropdown-item" href="#">Our People</a></li>
+              <li><a class="dropdown-item" href="#">Awards & Recognition</a></li>
+              <li><a class="dropdown-item" href="#">Work with us</a></li>
+              <li><a class="dropdown-item" href="#">Contact Us</a></li>
+            </ul>
+          </li>
+          <!-- ... and other dropdowns continue exactly as they were ... -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Areas of work <svg class="nav-arrow"
+                width="21" height="10" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Health</a></li>
+              <li><a class="dropdown-item" href="#">Sanitation</a></li>
+              <li><a class="dropdown-item" href="#">Public Finance</a></li>
+              <li><a class="dropdown-item" href="#">Urban Governance</a></li>
+              <li><a class="dropdown-item" href="#">Education</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Products & Solutions <svg
+                class="nav-arrow" width="21" height="10" viewBox="0 0 10 6" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">DIGIT</a></li>
+              <li><a class="dropdown-item" href="#">Solutions Hub</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Our Platform <svg class="nav-arrow"
+                width="21" height="10" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Architecture</a></li>
+              <li><a class="dropdown-item" href="#">Features</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Ecosystem <svg class="nav-arrow"
+                width="21" height="10" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Partners</a></li>
+              <li><a class="dropdown-item" href="#">Case Studies</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Resources <svg class="nav-arrow"
+                width="21" height="10" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Articles</a></li>
+              <li><a class="dropdown-item" href="#">Reports</a></li>
+            </ul>
+          </li>
+          <li class="nav-item ms-lg-3 d-none d-lg-block">
+            <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start w-100" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+    <div class="offcanvas-header d-flex justify-content-between align-items-center">
+      <img src="img/logo.png" alt="eGov Foundation" class="egov-logo" style="width: 100px;">
+      <div class="d-flex align-items-center">
+        <!-- Language Switcher -->
+        <div class="dropdown me-3">
+          <span class="dropdown-toggle d-flex align-items-center" id="mobileLangDropdown" data-bs-toggle="dropdown"
+            style="cursor: pointer; color: #1577dd; font-weight: 700; font-size: 16px;">
+            <img src="https://flagcdn.com/w20/gb.png" alt="English" width="18" class="me-1">
+            <span>ENG</span>
+            <i class="fas fa-caret-down ms-1"></i>
+          </span>
+          <ul class="dropdown-menu dropdown-menu-end border-0 shadow">
+            <li><a class="dropdown-item" href="#">English</a></li>
+            <li><a class="dropdown-item" href="#">Hindi</a></li>
+          </ul>
+        </div>
+        <!-- Close Button -->
+        <button type="button" class="mobile-close-btn" data-bs-dismiss="offcanvas" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+    <div class="offcanvas-body p-0">
+      <div class="accordion mobile-accordion" id="accordionMobile">
+        <!-- About Us -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#mobAbout"
+              aria-expanded="true">
+              About Us
+            </button>
+          </h2>
+          <div id="mobAbout" class="accordion-collapse collapse" data-bs-parent="#accordionMobile">
+            <div class="accordion-body">
+              <ul class="mobile-sub-nav">
+                <li><a href="#">Who We Are</a></li>
+                <li><a href="#">Our Impact</a></li>
+                <li><a href="#">Our Approach</a></li>
+                <li><a href="#">Our People</a></li>
+                <li><a href="#">Awards & Recognition</a></li>
+                <li><a href="#">Work with us</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Areas of Work -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mobAreas">
+              Areas of work
+            </button>
+          </h2>
+          <div id="mobAreas" class="accordion-collapse collapse" data-bs-parent="#accordionMobile">
+            <div class="accordion-body">
+              <ul class="mobile-sub-nav">
+                <li><a href="#">Health</a></li>
+                <li><a href="#">Sanitation</a></li>
+                <li><a href="#">Public Finance</a></li>
+                <li><a href="#">Urban Governance</a></li>
+                <li><a href="#">Education</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Products & Solutions -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mobProducts">
+              Products & Solutions
+            </button>
+          </h2>
+          <div id="mobProducts" class="accordion-collapse collapse" data-bs-parent="#accordionMobile">
+            <div class="accordion-body">
+              <ul class="mobile-sub-nav">
+                <li><a href="#">DIGIT</a></li>
+                <li><a href="#">Solutions Hub</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Our Platform -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mobPlatform">
+              Our Platform
+            </button>
+          </h2>
+          <div id="mobPlatform" class="accordion-collapse collapse" data-bs-parent="#accordionMobile">
+            <div class="accordion-body">
+              <ul class="mobile-sub-nav">
+                <li><a href="#">Architecture</a></li>
+                <li><a href="#">Features</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Ecosystem -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobEco">
+              Ecosystem
+            </button>
+          </h2>
+          <div id="mobEco" class="accordion-collapse collapse" data-bs-parent="#accordionMobile">
+            <div class="accordion-body">
+              <ul class="mobile-sub-nav">
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Case Studies</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Resources -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mobResources">
+              Resources
+            </button>
+          </h2>
+          <div id="mobResources" class="accordion-collapse collapse" data-bs-parent="#accordionMobile">
+            <div class="accordion-body">
+              <ul class="mobile-sub-nav">
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">Reports</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Hero -->
+  <section class="hero fade-in-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-lg-5 py-lg-5 py-3 text-center text-md-start">
+          <h1>20 years of digital<br>transformation in<br>public service delivery<br><strong
+              class="highlight-underline">It's possible.</strong></h1>
+          <p class="hero-text mt-4 mb-4 mx-lg-0">Catalysts.
+            Ecosystem enablers. Problem Solvers.<br>At eGov, we're driven by the power of open digital infrastructure
+            and ecosystems to enable governments deliver accessible, inclusive and transparent services to every
+            citizen.</p>
+          <div class="d-flex gap-3 justify-content-center justify-content-md-start mt-5">
+            <a href="#" class="btn-cyan d-flex align-items-center justify-content-center">Our Approach</a>
+            <a href="#" class="btn-outline-navy d-flex align-items-center justify-content-center">Our Impact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats-section fade-in-section">
+    <div class="container">
+      <div class="row mt-lg-5 d-flex align-items-center">
+        <div class="col-lg-8 col-sm-12">
+          <h2 class="stat-main">1,000,000,100<span>+</span></h2>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+          <p class="text-light mb-5">
+            Citizens availing public services through eGov's Digital Public Goods (DPG)</p>
+        </div>
+      </div>
+      <div class="row mt-5 ">
+        <div class="col-md-12 empty-col  d-lg-block d-none"></div>
+        <div class="col-lg-4 col-md-6 d-flex justify-content-center align-items-center">
+          <div>
+            <h3 class="fw-lighter text-white text-partner">1.1 Billion+</h3>
+            <p class="text-lighter">Public services delivered</p>
+          </div>
+
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex justify-content-center align-items-center">
+          <div>
+            <h3 class="fw-lighter text-white text-partner">50+ partners</h3>
+            <p class="text-lighter text-center">From technology, <br> governments and NGOs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Big Problems -->
+  <section class=" bold-approaches fade-in-section">
+    <div class="container">
+      <div class="bold-card">
+        <div class="row">
+          <div class="col-lg-5 mb-4">
+            <h2 class="text-approach mb-5 fw-light ">Big problems need<br><span class="text-approach-bold"
+                style="font-weight: 800; font-size: 2.5rem; line-height: 1.2;">bold approaches</strong></h2>
+
+
+            <ul class="nav nav-pills pill-nav flex-column " id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-health-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-health" type="button" role="tab">PublicHealth</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-sanitation-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-sanitation" type="button" role="tab">Public Finance</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-urban-tab" data-bs-toggle="pill" data-bs-target="#pills-urban"
+                  type="button" role="tab">Local Goverance</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-gov-tab" data-bs-toggle="pill" data-bs-target="#pills-gov"
+                  type="button" role="tab">Water & Sanitation</button>
+              </li>
+            </ul>
+
+          </div>
+          <div class="col-lg-7">
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-health" role="tabpanel">
+                <div class="row h-100 g-2">
+                  <div class="col-md-6 col-6">
+                    <div class="feature-card"
+                      style="background-color: #4bb5cb; background-image: url('./img/icu.png');">
+                      <div class="content-wrapper">
+                        <h3 class="fw-bold mb-0" style="font-size: 3.5rem;">210+</h3>
+                        <p class="mb-0">Cities LIVE with 10BedICU across
+                          India</p>
+                        <button class="btn btn-light rounded-pill btn-sm px-4 py-2 mt-2 read-btn""
+                          >Read More</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class=" col-md-6 col-6">
+                          <div class="feature-card"
+                            style="background-color: #1a8ffc; background-image: url('./img/covid-vaccine-1.png');">
+                            <div class="content-wrapper">
+                              <h3 class="fw-bold mb-0">2 Bn</h3>
+                              <p class="mb-0 pe-4">COVID-19 vaccination certificates
+                                issued globally</p>
+                              <button class="read-btn btn btn-light rounded-pill btn-sm px-4 py-2 mt-2 read-btn""
+                          >Read More</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class=" tab-pane fade" id="pills-sanitation" role="tabpanel">
+                                <div class="row h-100 g-2">
+                                  <div class="col-md-6  col-6">
+                                    <div class="feature-card"
+                                      style="background-color: #4bb5cb; background-image: url('./img/public-img1.png');">
+                                      <div class="content-wrapper">
+                                        <h3 class="fw-bold mb-0" style="font-size: 3.5rem;">210+</h3>
+                                        <p class="mb-0 pe-4">Cities LIVE with 10BedICU across
+                                          India</p>
+                                        <button class="btn btn-light rounded-pill btn-sm px-4 py-2 mt-2 read-btn""
+                          >Read More</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class=" col-md-6 col-6">
+                                          <div class="feature-card"
+                                            style="background-color: #1a8ffc; background-image: url('./img/public-img2.png');">
+                                            <div class="content-wrapper">
+                                              <h3 class="fw-bold mb-0">2 Bn</h3>
+                                              <p class="mb-0">COVID-19 vaccination certificates
+                                                issued globally</p>
+                                              <button class="btn btn-light rounded-pill btn-sm px-4 py-2 mt-2 read-btn""
+                          >Read More</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class=" tab-pane fade" id="pills-urban" role="tabpanel">
+                                                <div class="row h-100 g-2">
+                                                  <div class="col-md-6 col-6">
+                                                    <div class="feature-card"
+                                                      style="background-color: #4bb5cb; background-image: url('./img/public-img1.png');">
+                                                      <div class="content-wrapper">
+                                                        <h3 class="fw-bold mb-0" style="font-size: 3.5rem;">350+</h3>
+                                                        <p class="mb-0">Cities LIVE with 10BedICU across
+                                                          India</p>
+                                                        <button
+                                                          class="btn btn-light rounded-pill btn-sm px-4 py-2 mt-2 read-btn""
+                          >Read More</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class=" col-md-6 col-6">
+                                                          <div class="feature-card"
+                                                            style="background-color: #1a8ffc; background-image: url('./img/local-img1.png');">
+                                                            <div class="content-wrapper">
+                                                              <h3 class="fw-bold mb-0">3 Bn</h3>
+                                                              <p class="mb-4">COVID-19 vaccination certificates
+                                                                issued globally</p>
+                                                              <button
+                                                                class="btn btn-light rounded-pill btn-sm px-4 py-2 mt-2 read-btn""
+                          >Read More</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class=" tab-pane fade" id="pills-gov" role="tabpanel">
+                                                                <div class="row h-100 g-2">
+                                                                  <div class="col-md-6 col-6">
+                                                                    <div class="feature-card"
+                                                                      style="background-color: #4bb5cb; background-image: url('./img/water.png');">
+                                                                      <div class="content-wrapper">
+                                                                        <h3 class="fw-bold mb-0"
+                                                                          style="font-size: 3.5rem;">210+</h3>
+                                                                        <p class="mb-0">Cities LIVE with 10BedICU across
+                                                                          India</p>
+                                                                        <button
+                                                                          class="btn btn-light rounded-pill btn-sm px-4 py-2 mt-2 read-btn""
+                          >Read More</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class=" col-md-6 col-6">
+                                                                          <div class="feature-card"
+                                                                            style="background-color: #1a8ffc; background-image: url('./img/Truck-man.png');">
+                                                                            <div class="content-wrapper">
+                                                                              <h3 class="fw-bold mb-0">2 Bn</h3>
+                                                                              <p class="mb-4">COVID-19 vaccination
+                                                                                certificates
+                                                                                issued globally</p>
+                                                                              <button
+                                                                                class="btn btn-light rounded-pill btn-sm px-4 py-2 mt-2 read-btn"
+                                                                                read-btn">Read More</button>
+                                                                            </div>
+                                                                          </div>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                          </div>
+                                                      </div>
+                                                    </div>
+  </section>
+
+  <!-- Sustaining Section -->
+  <section class="sustaining-section fade-in-section">
+    <div class="container text-center">
+      <h2 class="sustaining-title">20 years of reimagining for citizens and<br><strong>sustaining change</strong></h2>
+      <p class="mt-4 mb-5 mx-auto">
+        Technology is powerful, but is only one piece of the puzzle, when it comes to enhancing the quality of life for
+        every citizen. To have sustainable impact at scale, the collective energy of local networks to solve local
+        problems needs to be tapped into. Our partners & networks bring this collective energy to life. The ecosystem
+        already exists; our task is to facilitate and amplify their efforts. For 20 years, we've been turning small
+        steps into lasting, meaningful change, so that no citizen is left behind.
+      </p>
+
+      <div class="row justify-content-center gap-4 mb-4">
+        <!-- Video Card 1 -->
+        <div class="col-md-5">
+          <div class="video-card d-flex align-items-stretch position-relative" data-bs-toggle="modal"
+            data-bs-target="#videoModal" data-video="https://www.youtube.com/embed/LXb3EKWsInQ">
+            <div class="w-50 d-flex flex-column justify-content-center position-relative z-2">
+              <div class="video-quote text-start my-auto py-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#a0aabf" xmlns="http://www.w3.org/2000/svg"
+                  class="mb-2">
+                  <path
+                    d="M14 11C14 8.5 15.5 7 18 7C19.5 7 21 8 21 10C21 12.5 19.5 14 18 14H17C17 15.5 18.5 17 21 17V19C16 19 14 16 14 11ZM5 11C5 8.5 6.5 7 9 7C10.5 7 12 8 12 10C12 12.5 10.5 14 9 14H8C8 15.5 9.5 17 12 17V19C7 19 5 16 5 11Z" />
+                </svg>
+                <p class="mb-2 fw-semibold">Leveraging technology for
+                  sustainable development</p>
+                <div class="d-flex align-items-center video-icon">
+                  <div class="video-icon-inner">
+                    <i class="fas fa-play"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-50">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop"
+                class="img-fluid h-100 w-100" style="object-fit: cover;">
+            </div>
+          </div>
+        </div>
+        <!-- Video Card 2 -->
+        <div class="col-md-5">
+          <div class="video-card d-flex align-items-stretch position-relative" data-bs-toggle="modal"
+            data-bs-target="#videoModal" data-video="https://www.youtube.com/embed/tgbNymZ7vqY">
+            <div class="w-50 d-flex flex-column justify-content-center position-relative z-2">
+              <div class="video-quote text-start my-auto py-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#a0aabf" xmlns="http://www.w3.org/2000/svg"
+                  class="mb-2">
+                  <path
+                    d="M14 11C14 8.5 15.5 7 18 7C19.5 7 21 8 21 10C21 12.5 19.5 14 18 14H17C17 15.5 18.5 17 21 17V19C16 19 14 16 14 11ZM5 11C5 8.5 6.5 7 9 7C10.5 7 12 8 12 10C12 12.5 10.5 14 9 14H8C8 15.5 9.5 17 12 17V19C7 19 5 16 5 11Z" />
+                </svg>
+                <p class="mb-2 fw-semibold">Digitising civic services
+                  for better life</p>
+                <div class="d-flex align-items-center video-icon">
+                  <div class="video-icon-inner">
+                    <i class="fas fa-play"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-50">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop"
+                class="img-fluid h-100 w-100" style="object-fit: cover;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="btn btn-outline-navy rounded-pill px-5 py-2 mt-4">About Us</a>
+    </div>
+  </section>
+
+  <!-- Platform -->
+  <section class="platform-section fade-in-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 z-2 order-lg-1 order-2 mobile-digit-text">
+          <img src="./img/digit-img.png" alt="Digit logo" class="img-fluid digit-logo">
+          <h2 class="mt-3">Our open source<br><span class="digit-tech">technology-for-good
+              platform</strong></h2>
+          <p class="mt-4 mb-4">DIGIT stands for Digital Infrastructure for Governance, Impact & Transformation. It is an
+            open source platform that provides foundational digital public goods to build applications that solve
+            population-scale challenges.</p>
+          <a href="#" class="btn btn-light rounded-pill px-4 py-2 fw-medium explore-btn mt-4">Explore the
+            platform</a>
+        </div>
+        <div class="col-lg-6 position-relative order-lg-2 order-1 mobile-digit-img d-md-none d-lg-block">
+          <img src="./img/digit-girl.png" alt="Woman using phone" class="digit-woman">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest at eGov  -->
+  <section class="latest-section fade-in-section">
+    <div class="container">
+      <h2 class="mb-5 fs-45 text-primary fw-300">Latest at <strong style="font-weight: 700;" class="fs-45">eGov</strong>
+      </h2>
+
+      <!--  Tabs -->
+      <ul class="nav nav-pills latest-pill-nav" id="latest-tab" role="tablist">
+        <li class="nav-item stagger-item" role="presentation">
+          <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-new">What's New</button>
+        </li>
+        <li class="nav-item stagger-item" role="presentation">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-articles">Articles</button>
+        </li>
+        <li class="nav-item stagger-item" role="presentation">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-whitepapers">Whitepapers</button>
+        </li>
+        <li class="nav-item stagger-item" role="presentation">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-casestudies">Case Studies</button>
+        </li>
+        <li class="nav-item stagger-item" role="presentation">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-strategy">Strategy Papers</button>
+        </li>
+        <li class="nav-item stagger-item" role="presentation">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-newsmedia">News & Media</button>
+        </li>
+        <li class="nav-item stagger-item" role="presentation">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-videos">Videos</button>
+        </li>
+        <li class="nav-item stagger-item" role="presentation">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-newsletter">Newsletter</button>
+        </li>
+      </ul>
+
+      <!-- Tab Content -->
+      <div class="tab-content">
+        <!-- What's New Tab -->
+        <div class="tab-pane fade show active" id="tab-new" role="tabpanel">
+          <div class="row g-4 d-flex justify-content-lg-center">
+            <!-- Card 1 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop"
+                  alt="Roundtable" class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">Roundtable on Empowering Elected Representatives and
+                    Citizens</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;eGov Foundation</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;23 Apr 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Local Governance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop"
+                  alt="Solver Network" class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">The Solver Network | A Policy Vision for Collaborative
+                    Public
+                    Problem-Solving</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;T Krishnakumar</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;07 Apr 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Local Governance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop"
+                  alt="Digital Transformation" class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">State-led Urban Digital Transformation</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;Mathews P Joseph</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;13 Mar 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Odisha</span>
+                    <span class="latest-badge">Kerala</span>
+                    <span class="latest-badge">Local Governance</span>
+                    <span class="latest-badge">Andhra Pradesh</span>
+                    <span class="latest-badge">Punjab</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Articles Tab -->
+        <div class="tab-pane fade" id="tab-articles" role="tabpanel">
+          <div class="row g-4 d-flex justify-content-lg-center">
+            <!-- Card 1 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=600&h=400&fit=crop"
+                  alt="Office setup" class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">Roundtable on Empowering Elected Representatives and
+                    Citizens</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;eGov Foundation</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;23 Apr 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Local Governance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&h=400&fit=crop"
+                  alt="Meeting" class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">The Solver Network | A Policy Vision for Collaborative
+                    Public
+                    Problem-Solving</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;T Krishnakumar</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;07 Apr 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Local Governance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop"
+                  alt="Collaboration" class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">State-led Urban Digital Transformation</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;Mathews P Joseph</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;13 Mar 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Odisha</span>
+                    <span class="latest-badge">Kerala</span>
+                    <span class="latest-badge">Local Governance</span>
+                    <span class="latest-badge">Andhra Pradesh</span>
+                    <span class="latest-badge">Punjab</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Whitepapers Tab -->
+        <div class="tab-pane fade" id="tab-whitepapers" role="tabpanel">
+          <div class="row g-4 d-flex justify-content-lg-center">
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop"
+                  alt="Research" class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">Roundtable on Empowering Elected Representatives and
+                    Citizens</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;eGov Foundation</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;23 Apr 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Local Governance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?w=600&h=400&fit=crop" alt="Notes"
+                  class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">The Solver Network | A Policy Vision for Collaborative
+                    Public
+                    Problem-Solving</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;T Krishnakumar</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;07 Apr 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Local Governance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop" alt="Report"
+                  class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">State-led Urban Digital Transformation</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;Mathews P Joseph</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;13 Mar 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Odisha</span>
+                    <span class="latest-badge">Kerala</span>
+                    <span class="latest-badge">Local Governance</span>
+                    <span class="latest-badge">Andhra Pradesh</span>
+                    <span class="latest-badge">Punjab</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Studies Tab -->
+        <div class="tab-pane fade" id="tab-casestudies" role="tabpanel">
+          <div class="row g-4 d-flex justify-content-lg-center">
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
+                  alt="Growth" class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">Roundtable on Empowering Elected Representatives and
+                    Citizens</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;eGov Foundation</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;23 Apr 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Local Governance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1551288049-bbbda5366391?w=600&h=400&fit=crop"
+                  alt="Analytics" class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">The Solver Network | A Policy Vision for Collaborative
+                    Public
+                    Problem-Solving</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;T Krishnakumar</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;07 Apr 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Local Governance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=600&h=400&fit=crop"
+                  alt="Public service" class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">State-led Urban Digital Transformation</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;Mathews P Joseph</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;13 Mar 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Odisha</span>
+                    <span class="latest-badge">Kerala</span>
+                    <span class="latest-badge">Local Governance</span>
+                    <span class="latest-badge">Andhra Pradesh</span>
+                    <span class="latest-badge">Punjab</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Strategy Papers Tab -->
+        <div class="tab-pane fade" id="tab-strategy" role="tabpanel">
+          <div class="row g-4 d-flex justify-content-lg-center">
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=400&fit=crop"
+                  alt="Solutions" class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">Roundtable on Empowering Elected Representatives and
+                    Citizens</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;eGov Foundation</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;23 Apr 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Local Governance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1454165205732-d03240ea0fb2?w=600&h=400&fit=crop"
+                  alt="Planning" class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">The Solver Network | A Policy Vision for Collaborative
+                    Public
+                    Problem-Solving</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;T Krishnakumar</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;07 Apr 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Local Governance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1522071823991-b5ae77c4740e?w=600&h=400&fit=crop"
+                  alt="Strategy" class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">State-led Urban Digital Transformation</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;Mathews P Joseph</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;13 Mar 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Odisha</span>
+                    <span class="latest-badge">Kerala</span>
+                    <span class="latest-badge">Local Governance</span>
+                    <span class="latest-badge">Andhra Pradesh</span>
+                    <span class="latest-badge">Punjab</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- News & Media Tab -->
+        <div class="tab-pane fade" id="tab-newsmedia" role="tabpanel">
+          <div class="row g-4 d-flex justify-content-lg-center">
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1495020689067-958852a7765e?w=600&h=400&fit=crop"
+                  alt="Newsroom" class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">Roundtable on Empowering Elected Representatives and
+                    Citizens</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;eGov Foundation</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;23 Apr 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Local Governance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&h=400&fit=crop"
+                  alt="Journalism" class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">The Solver Network | A Policy Vision for Collaborative
+                    Public
+                    Problem-Solving</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;T Krishnakumar</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;07 Apr 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Local Governance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1574607383476-f517f260d30b?w=600&h=400&fit=crop"
+                  alt="Camera" class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">State-led Urban Digital Transformation</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;Mathews P Joseph</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;13 Mar 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Odisha</span>
+                    <span class="latest-badge">Kerala</span>
+                    <span class="latest-badge">Local Governance</span>
+                    <span class="latest-badge">Andhra Pradesh</span>
+                    <span class="latest-badge">Punjab</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Videos Tab -->
+        <div class="tab-pane fade" id="tab-videos" role="tabpanel">
+          <div class="row g-4 d-flex justify-content-lg-center">
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&h=400&fit=crop"
+                  alt="Cinema" class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">Roundtable on Empowering Elected Representatives and
+                    Citizens</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;eGov Foundation</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;23 Apr 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Local Governance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=600&h=400&fit=crop" alt="Media"
+                  class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">The Solver Network | A Policy Vision for Collaborative
+                    Public
+                    Problem-Solving</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;T Krishnakumar</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;07 Apr 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Local Governance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&h=400&fit=crop"
+                  alt="Camera lens" class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">State-led Urban Digital Transformation</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;Mathews P Joseph</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;13 Mar 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Odisha</span>
+                    <span class="latest-badge">Kerala</span>
+                    <span class="latest-badge">Local Governance</span>
+                    <span class="latest-badge">Andhra Pradesh</span>
+                    <span class="latest-badge">Punjab</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Newsletter Tab -->
+        <div class="tab-pane fade" id="tab-newsletter" role="tabpanel">
+          <div class="row g-4 d-flex justify-content-lg-center">
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop"
+                  alt="Newsletter" class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">Roundtable on Empowering Elected Representatives and
+                    Citizens</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;eGov Foundation</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;23 Apr 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Local Governance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop" alt="Updates"
+                  class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">The Solver Network | A Policy Vision for Collaborative
+                    Public
+                    Problem-Solving</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;T Krishnakumar</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;07 Apr 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Local Governance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="latest-card">
+                <img src="https://images.unsplash.com/photo-1557426272-fc759fbb7a8d?w=600&h=400&fit=crop"
+                  alt="Connection" class="latest-card-img">
+                <div class="latest-card-body">
+                  <h5 class="latest-card-title text-primary">State-led Urban Digital Transformation</h5>
+                  <div class="latest-card-meta text-primary">
+                    <span>&bull;&nbsp;&nbsp;Mathews P Joseph</span>
+                    <span>+2 More</span>
+                    <span>&bull;&nbsp;&nbsp;13 Mar 2026</span>
+                  </div>
+                  <div class="badge-container">
+                    <span class="latest-badge">Odisha</span>
+                    <span class="latest-badge">Kerala</span>
+                    <span class="latest-badge">Local Governance</span>
+                    <span class="latest-badge">Andhra Pradesh</span>
+                    <span class="latest-badge">Punjab</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supporters -->
+  <section class="supporters fade-in-section">
+    <div class="container">
+      <h2 class="mb-5 fs-45 text-primary fw-300">Our <strong style="font-weight: 700;" class="fs-45">Supporters</strong>
+      </h2>
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-4 w-100 px-lg-5">
+        <img src="./img/co-develop.png" alt="Co-Develop" class="support-img">
+        <img src="./img/melinda.png" alt="Melinda Gates Foundation" class="support-img">
+        <img src="./img/tata-trusts.png" alt="Tata Trusts" class="support-img">
+        <img src="./img/global-fund.png" alt="Global Fund" class="support-img">
+        <img src="./img/nandan.png" alt="Nandan Nilekani" class="support-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container fade-in-section">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="pe-4">
+            <img src="./img/logo.png" class="footer-logo" height="40" alt="footer logo">
+            <p class="small text-primary mt-3 fs-16">Catalysing digital transformation for public service delivery.</p>
+            <div class="d-flex gap-3 mt-4 footer-social-links">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold mb-4 fs-20 text-primary">Useful Links</h5>
+          <div class="row">
+            <div class="col-6">
+              <ul class="list-unstyled small">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Our Impact</a></li>
+                <li><a href="#">Platform</a></li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul class="list-unstyled small">
+                <li><a href="#">Campaign</a></li>
+                <li><a href="#">Donate</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold mb-4 fs-20 text-primary">Subscribe Now</h5>
+          <p class="small text-primary fs-16">Join our growing community and receive the latest updates.</p>
+          <div class="input-group mt-3">
+            <input type="email" class="form-control rounded-pill rounded-end-0 border-end-0 py-2 px-3 small"
+              placeholder="Enter Email Id">
+            <button class="btn btn-warning text-white rounded-pill rounded-start-0" type="button"><i
+                class="fa-solid fa-envelope"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bottom-footer mt-5 py-3">
+      <div class="container d-flex justify-content-between small text-white">
+        <span>©2024. eGov. All Rights Reserved.</span>
+        <div>
+          <a href="#" class="text-decoration-none text-white">Privacy Policy </a>
+          <a href="#" class="text-decoration-none text-white ps-md-4 ps-2"> Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Video Modal -->
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9 bg-dark">
+            <iframe id="videoIframe" src="" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Intersection Observer & Animations -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Scroll to Top logic
+      const backToTopBtn = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          backToTopBtn.classList.add('show');
+        } else {
+          backToTopBtn.classList.remove('show');
+        }
+      });
+
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      const faders = document.querySelectorAll('.fade-in-section');
+      faders.forEach(fader => {
+        observer.observe(fader);
+      });
+
+      // Video Modal Logic
+      const videoModal = document.getElementById('videoModal');
+      const videoIframe = document.getElementById('videoIframe');
+
+      videoModal.addEventListener('show.bs.modal', function (event) {
+        const button = event.relatedTarget;
+        const videoSrc = button.getAttribute('data-video');
+        videoIframe.src = videoSrc + "?autoplay=1";
+      });
+
+      videoModal.addEventListener('hide.bs.modal', function () {
+        videoIframe.src = ""; // Stops video when modal is closed
+      });
+    });
+
+    // Language dropdown selection
+    function changeLang(code, name) {
+      document.getElementById('langFlag').src = 'https://flagcdn.com/w20/' + code + '.png';
+      document.getElementById('langText').innerText = name;
+    }
+  </script>
+</body>
+
+</html>

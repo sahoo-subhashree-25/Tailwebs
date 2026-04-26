@@ -1,0 +1,10 @@
+/* Resetting default Vite styles to allow full width and remove borders */
+body {
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
