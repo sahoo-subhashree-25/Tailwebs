@@ -9,7 +9,7 @@ const BoldApproaches = () => {
             <div className="col-lg-5 mb-4">
               <h2 className="text-approach mb-5 fw-light ">
                 Big problems need<br />
-                <span className="text-approach-bold" style={{ fontWeight: 800, fontSize: '2.5rem', lineHeight: 1.2 }}>bold approaches</span>
+                <span className="text-approach-bold" >bold approaches</span>
               </h2>
 
               <ul className="nav nav-pills pill-nav flex-column" id="pills-tab" role="tablist">
@@ -35,7 +35,7 @@ const BoldApproaches = () => {
                     <div className="col-md-6 col-6">
                       <div className="feature-card" style={{ backgroundColor: '#4bb5cb', backgroundImage: "url('/img/icu.png')" }}>
                         <div className="content-wrapper">
-                          <h3 className="fw-bold mb-0" style={{ fontSize: '3.5rem' }}>210+</h3>
+                          <h3 className="fw-bold mb-0">210+</h3>
                           <p className="mb-0">Cities LIVE with 10BedICU across India</p>
                           <button className="btn btn-light rounded-pill btn-sm px-4 py-2 mt-2 read-btn">Read More</button>
                         </div>
@@ -44,7 +44,7 @@ const BoldApproaches = () => {
                     <div className="col-md-6 col-6">
                       <div className="feature-card" style={{ backgroundColor: '#1a8ffc', backgroundImage: "url('/img/covid-vaccine-1.png')" }}>
                         <div className="content-wrapper">
-                          <h3 className="fw-bold mb-0" style={{ fontSize: '3.5rem' }}>2 Bn</h3>
+                          <h3 className="fw-bold mb-0">2 Bn</h3>
                           <p className="mb-0">COVID-19 vaccination certificates issued globally</p>
                           <button className="btn btn-light rounded-pill btn-sm px-4 py-2 mt-2 read-btn">Read More</button>
                         </div>
@@ -59,7 +59,7 @@ const BoldApproaches = () => {
                     <div className="col-md-6 col-6">
                       <div className="feature-card" style={{ backgroundColor: '#4bb5cb', backgroundImage: "url('/img/public-img1.png')" }}>
                         <div className="content-wrapper">
-                          <h3 className="fw-bold mb-0" style={{ fontSize: '3.5rem' }}>210+</h3>
+                          <h3 className="fw-bold mb-0">210+</h3>
                           <p className="mb-0 pe-4">Cities LIVE with 10BedICU across India</p>
                           <button className="btn btn-light rounded-pill btn-sm px-4 py-2 mt-2 read-btn">Read More</button>
                         </div>
@@ -68,7 +68,7 @@ const BoldApproaches = () => {
                     <div className="col-md-6 col-6">
                       <div className="feature-card" style={{ backgroundColor: '#1a8ffc', backgroundImage: "url('/img/public-img2.png')" }}>
                         <div className="content-wrapper">
-                          <h3 className="fw-bold mb-0" style={{ fontSize: '3.5rem' }}>2 Bn</h3>
+                          <h3 className="fw-bold mb-0">2 Bn</h3>
                           <p className="mb-0">COVID-19 vaccination certificates issued globally</p>
                           <button className="btn btn-light rounded-pill btn-sm px-4 py-2 mt-2 read-btn">Read More</button>
                         </div>
@@ -83,7 +83,7 @@ const BoldApproaches = () => {
                     <div className="col-md-6 col-6">
                       <div className="feature-card" style={{ backgroundColor: '#4bb5cb', backgroundImage: "url('/img/public-img1.png')" }}>
                         <div className="content-wrapper">
-                          <h3 className="fw-bold mb-0" style={{ fontSize: '3.5rem' }}>350+</h3>
+                          <h3 className="fw-bold mb-0">350+</h3>
                           <p className="mb-0">Cities LIVE with 10BedICU across India</p>
                           <button className="btn btn-light rounded-pill btn-sm px-4 py-2 mt-2 read-btn">Read More</button>
                         </div>
@@ -92,7 +92,7 @@ const BoldApproaches = () => {
                     <div className="col-md-6 col-6">
                       <div className="feature-card" style={{ backgroundColor: '#1a8ffc', backgroundImage: "url('/img/local-img1.png')" }}>
                         <div className="content-wrapper">
-                          <h3 className="fw-bold mb-0" style={{ fontSize: '3.5rem' }}>3 Bn</h3>
+                          <h3 className="fw-bold mb-0">3 Bn</h3>
                           <p className="mb-4">COVID-19 vaccination certificates issued globally</p>
                           <button className="btn btn-light rounded-pill btn-sm px-4 py-2 mt-2 read-btn">Read More</button>
                         </div>
@@ -107,7 +107,7 @@ const BoldApproaches = () => {
                     <div className="col-md-6 col-6">
                       <div className="feature-card" style={{ backgroundColor: '#4bb5cb', backgroundImage: "url('/img/water.png')" }}>
                         <div className="content-wrapper">
-                          <h3 className="fw-bold mb-0" style={{ fontSize: '3.5rem' }}>210+</h3>
+                          <h3 className="fw-bold mb-0">210+</h3>
                           <p className="mb-0">Cities LIVE with 10BedICU across India</p>
                           <button className="btn btn-light rounded-pill btn-sm px-4 py-2 mt-2 read-btn">Read More</button>
                         </div>
@@ -116,7 +116,7 @@ const BoldApproaches = () => {
                     <div className="col-md-6 col-6">
                       <div className="feature-card" style={{ backgroundColor: '#1a8ffc', backgroundImage: "url('/img/Truck-man.png')" }}>
                         <div className="content-wrapper">
-                          <h3 className="fw-bold mb-0" style={{ fontSize: '3.5rem' }}>2 Bn</h3>
+                          <h3 className="fw-bold mb-0">2 Bn</h3>
                           <p className="mb-4">COVID-19 vaccination certificates issued globally</p>
                           <button className="btn btn-light rounded-pill btn-sm px-4 py-2 mt-2 read-btn">Read More</button>
                         </div>

@@ -499,10 +499,21 @@ a {
     transform: translateY(0);
 }
 
-.stagger-item:nth-child(1) { transition-delay: 0.1s; }
-.stagger-item:nth-child(2) { transition-delay: 0.25s; }
-.stagger-item:nth-child(3) { transition-delay: 0.4s; }
-.stagger-item:nth-child(4) { transition-delay: 0.55s; }
+.stagger-item:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.stagger-item:nth-child(2) {
+    transition-delay: 0.25s;
+}
+
+.stagger-item:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.stagger-item:nth-child(4) {
+    transition-delay: 0.55s;
+}
 
 /* ==== Sustaining Section ==== */
 .sustaining-section {
@@ -694,164 +705,6 @@ footer ul {
     font-size: 16px;
 }
 
-@media (min-width: 1200px) {
-    .container {
-        max-width: 80% !important;
-        width: 80% !important;
-    }
-
-    .top-bar .container,
-    .navbar .container {
-        max-width: 86% !important;
-        width: 86% !important;
-    }
-}
-
-@media (min-width: 992px) {
-    .dropdown:hover .dropdown-menu {
-        display: block;
-        margin-top: 0;
-        animation: fadeIn 0.3s;
-    }
-}
-
-@media (max-width: 991.98px) {
-    .top-bar a,
-    .top-bar .lang-dropdown {
-        margin-left: 0px !important;
-        margin-right: 0px !important;
-    }
-
-    .egov-logo { width: 84px; }
-
-    .hero {
-        background-size: 77% auto !important;
-        padding-top: 0px !important;
-        padding-bottom: 40px !important;
-    }
-
-    .hero h1 { font-size: 30px; }
-    .hero h1 strong { font-size: 35px; }
-
-    .bold-approaches .pill-nav .nav-item { width: 100%; }
-
-    .support-img { max-height: 32px; }
-    .supporters { padding: 130px 0px; }
-
-    .highlight-underline::after {
-        bottom: 0px;
-        background-size: 32% 100%;
-    }
-}
-
-@media (max-width:35em) {
-    .top-bar a,
-    #langText,
-    .hero-text,
-    .stats-section p,
-    .sustaining-section p,
-    .platform-section p {
-        font-size: 12px;
-    }
-
-    .latest-card-title { font-size: 14px; }
-
-    .latest-card-meta,
-    .bottom-footer a,
-    .bottom-footer span {
-        font-size: 10px;
-    }
-
-    .latest-card-meta { margin-bottom: 10px; }
-
-    .top-bar a { padding: 10px 14px; }
-
-    .egov-logo { width: 80px; }
-
-    .hero {
-        background-position: top center !important;
-        background-size: 100% auto !important;
-        padding-top: 250px !important;
-        padding-bottom: 40px !important;
-    }
-
-    .hero h1,
-    .hero h1 strong,
-    .text-approach,
-    .text-approach-bold,
-    .sustaining-title,
-    .digit-tech,
-    .fs-45 {
-        font-size: 30px;
-    }
-
-    .platform-section h2 { font-size: 25px; }
-
-    .highlight-underline::after {
-        left: 58px;
-        height: 31px;
-    }
-
-    .text-partner {
-        font-size: 30px;
-        text-align: center;
-        margin-bottom: 0px;
-    }
-
-    .stats-section { padding: 50px 0px 80px; }
-
-    .bold-approaches {
-        margin-top: -50px;
-        padding: 0px;
-    }
-
-    .bold-card { padding: 30px; }
-
-    .feature-card {
-        padding: 15px;
-        min-height: 244px;
-    }
-
-    .feature-card .content-wrapper p {
-        font-size: 10px;
-        max-width: 85%;
-    }
-
-    .sustaining-section,
-    .latest-section { padding: 50px 0px; }
-
-    .supporters { padding: 50px 0; }
-
-    .support-img { max-height: 16px; }
-
-    .mobile-digit-text {
-        text-align: center;
-        margin-top: 50px;
-    }
-
-    .mobile-digit-img {
-        max-height: 500px;
-        height: 150px;
-    }
-
-    .digit-woman {
-        max-height: 300px;
-        bottom: -38px;
-        right: 61px;
-    }
-
-    .digit-logo {
-        max-width: 136px;
-        margin-bottom: 0px;
-    }
-
-    .latest-pill-nav .nav-link {
-        padding: 10px 14px;
-        font-size: 12px;
-    }
-
-    .latest-pill-nav { gap: 8px; }
-}
 
 /* ==== Back to Top Button ==== */
 .back-to-top {
@@ -884,4 +737,282 @@ footer ul {
     color: #0e165d !important;
     border-color: #0e165d;
     transform: translateY(-5px);
+}
+
+/* mobile menu additions */
+.mobile-close-btn {
+    width: 44px;
+    height: 44px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: #000;
+    font-size: 20px;
+    transition: all 0.2s ease;
+}
+
+.mobile-close-btn:hover {
+    background: #eee;
+}
+
+.offcanvas-header {
+    border-bottom: 2px solid #f0f4f9;
+    padding: 15px 20px !important;
+}
+
+.mobile-accordion .accordion-item {
+    border: none;
+    border-bottom: 1px solid #f0f4f9;
+}
+
+.mobile-accordion .accordion-button {
+    background-color: #f7f9fb !important;
+    color: #000 !important;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 25px !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+.mobile-accordion .accordion-button:not(.collapsed) {
+    background-color: #fff !important;
+    color: var(--accent-cyan) !important;
+}
+
+.mobile-accordion .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234bb5c3'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+    background-size: 1.5rem !important;
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    transition: transform 0.3s ease;
+    background-size: 18px !important;
+}
+
+.mobile-accordion .accordion-body {
+    padding: 0 25px 15px 25px !important;
+    background-color: #fff;
+}
+
+.mobile-sub-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-sub-nav li {
+    padding: 8px 0;
+}
+
+.mobile-sub-nav li a {
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    transition: color 0.2s;
+}
+
+.mobile-sub-nav li a:hover {
+    color: var(--accent-cyan);
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80% !important;
+        width: 80% !important;
+    }
+
+    .top-bar .container,
+    .navbar .container {
+        max-width: 86% !important;
+        width: 86% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+        animation: fadeIn 0.3s;
+    }
+}
+
+@media (max-width: 991.98px) {
+
+    .top-bar a,
+    .top-bar .lang-dropdown {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+
+    .egov-logo {
+        width: 84px;
+    }
+
+    .hero {
+        background-size: 77% auto !important;
+        padding-top: 0px !important;
+        padding-bottom: 40px !important;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero h1 strong {
+        font-size: 35px;
+    }
+
+    .bold-approaches .pill-nav .nav-item {
+        width: 100%;
+    }
+
+    .support-img {
+        max-height: 32px;
+    }
+
+    .supporters {
+        padding: 130px 0px;
+    }
+
+    .highlight-underline::after {
+        bottom: 0px;
+        background-size: 32% 100%;
+    }
+}
+
+@media (max-width:35em) {
+
+    .top-bar a,
+    #langText,
+    .hero-text,
+    .stats-section p,
+    .sustaining-section p,
+    .platform-section p {
+        font-size: 12px;
+    }
+
+    .latest-card-title {
+        font-size: 14px;
+    }
+
+    .latest-card-meta,
+    .bottom-footer a,
+    .bottom-footer span {
+        font-size: 10px;
+    }
+
+    .latest-card-meta {
+        margin-bottom: 10px;
+    }
+
+    .top-bar a {
+        padding: 10px 14px;
+    }
+
+    .egov-logo {
+        width: 80px;
+    }
+
+    .hero {
+        background-position: top center !important;
+        background-size: 100% auto !important;
+        padding-top: 250px !important;
+        padding-bottom: 40px !important;
+    }
+
+    .hero h1,
+    .hero h1 strong,
+    .text-approach,
+    .text-approach-bold,
+    .sustaining-title,
+    .digit-tech,
+    .fs-45,
+    .sustaining-title strong {
+        font-size: 30px;
+    }
+
+    .platform-section h2 {
+        font-size: 25px;
+    }
+
+    .highlight-underline::after {
+        left: 58px;
+        height: 31px;
+    }
+
+    .text-partner {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .stats-section {
+        padding: 50px 0px 80px;
+    }
+
+    .bold-approaches {
+        margin-top: -50px;
+        padding: 0px;
+    }
+
+    .bold-card {
+        padding: 30px;
+    }
+
+    .feature-card {
+        padding: 15px;
+        min-height: 244px;
+    }
+
+    .feature-card .content-wrapper p {
+        font-size: 10px;
+        max-width: 85%;
+    }
+
+    .sustaining-section,
+    .latest-section {
+        padding: 50px 0px;
+    }
+
+    .supporters {
+        padding: 50px 0;
+    }
+
+    .support-img {
+        max-height: 16px;
+    }
+
+    .mobile-digit-text {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .mobile-digit-img {
+        max-height: 500px;
+        height: 150px;
+    }
+
+    .digit-woman {
+        max-height: 300px;
+        bottom: -38px;
+        right: 61px;
+    }
+
+    .digit-logo {
+        max-width: 136px;
+        margin-bottom: 0px;
+    }
+
+    .latest-pill-nav .nav-link {
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+
+    .latest-pill-nav {
+        gap: 8px;
+    }
 }
